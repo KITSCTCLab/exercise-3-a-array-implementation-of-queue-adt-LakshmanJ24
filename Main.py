@@ -15,7 +15,7 @@ class Solution:
             return False
 
     def is_queue_empty(self):
-          if self.rear == -1 and self.front == -1:
+        if self.rear == -1 and self.front == -1:
             return True
         else:
             return False
