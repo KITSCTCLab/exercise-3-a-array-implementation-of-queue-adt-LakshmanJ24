@@ -1,5 +1,4 @@
 class Solution:
-    
     def __init__(self, size):
         self.stack = []
         self.queue = []
@@ -36,20 +35,20 @@ class Solution:
         if not self.is_stack_full():
             self.stack.append(character)
             self.top += 1
-
+                    
     def enqueue_character(self, character):
         if not self.is_queue_full():
-            if self.front == -1:
-                self.front = 0
-            self.rear += 1
             self.queue.append(character)
-            
+            self.rear += 1
+            if self.front == -1:
+                self.front += 1
+
     def pop_character(self):
         if not self.is_stack_empty():
             data = self.stack.pop()
             self.top -= 1
             return data
-        
+
     def dequeue_character(self):
         if not self.is_queue_empty():
             data = self.queue[self.front]
@@ -63,6 +62,7 @@ length_of_text = len(text)
 solution = Solution(length_of_text)
 
 for index in range(length_of_text):
+    # Write code here
     solution.push_character(text[index])
     solution.enqueue_character(text[index])
 
