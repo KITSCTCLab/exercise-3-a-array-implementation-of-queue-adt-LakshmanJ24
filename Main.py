@@ -56,31 +56,23 @@ class Solution:
             self.front += 1
             return data
 
+text = input("Enter a word:")
 
-# read the string text
-text = input("Enter the word:")
-
-# find the length of text
 length_of_text = len(text)
 
-# Create the Solution class object
 solution = Solution(length_of_text)
 
-# push/enqueue all the characters of string text to stack
 for index in range(length_of_text):
     solution.push_character(text[index])
     solution.enqueue_character(text[index])
 
 is_palindrome = True
-
-# Write the necessary logic
 for index in range(length_of_text):
     if  solution.pop_character() != solution.dequeue_character():
         is_palindrome = False
         break
-        
-# finally print whether string text is palindrome or not.
+
 if is_palindrome:
-    print("The word, " + text + ", is a palindrome.")
+    print("The word " + text + " is a palindrome.");
 else:
-    print("The word, " + text + ", is not a palindrome.")
+    print("The word " + text + " is not a palindrome.")
