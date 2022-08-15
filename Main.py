@@ -55,7 +55,7 @@ class Solution:
             self.front += 1
             return data
 
-text = input("Enter a word:")
+text = input()
 
 length_of_text = len(text)
 
