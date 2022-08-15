@@ -27,7 +27,7 @@ class Solution:
             return False
 
     def is_queue_full(self):
-         if self.size == len(self.queue):
+        if self.size == len(self.queue):
             return True
         else:
             return False
